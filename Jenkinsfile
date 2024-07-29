@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        input(message: 'you want to deploy , are you sure ?', id: 'yes')
+      }
+    }
+
   }
 }
